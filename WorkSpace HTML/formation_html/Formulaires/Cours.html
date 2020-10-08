@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours</title>
+</head>
+
+<body>
+    <form name="myForm" action="">Ici les éléments du formulaire
+        <p>Nom : <input type="text" name=nom placeholder="Votre nom de famille"></p>
+        <p>Prénom : <input type="text" placeholder="Votre prénom"></p>
+        <p>Code Postal : <input type="text" pattern="[0-9]{5}" placeholder="Votre code postal"></p>
+        <p>Nationalitée : <input type="text" value="Française" readonly></p>
+        <p>Commentaire : <textarea cols="30" rows="10"></textarea></p>
+        <p>Votre navigateur préféré :
+            <select>
+                <option value="1">Edge</option>
+                <option value="2" selected>Firefox</option>
+                <option value="3">Safari</option>
+                <option value="4">Opera</option>
+                <option value="5">Google Chrome</option>
+            </select>
+        </p>
+        <p> Sexe :</p>
+        <input type="radio" name="sexe">Masculin
+        <input type="radio" name="sexe">Féminin
+        <p>Votre pizza avec :</p>
+        <input type="checkbox" name="n1" checked>Mozzarella <br>
+        <input type="checkbox" name="n2">Jambon <br>
+        <input type="checkbox" name="n3" checked>Sauce tomate <br>
+        <input type="checkbox" name="n4">Poivrons <br>
+        <input type="checkbox" name="n5">Champignons <br>
+        <input type="checkbox" name="n6">Olives noires <br>
+        <input type="checkbox" name="n7">Sauce piquante <br>
+
+        Choisir un fruit : <input type="text" list="fruits">
+        <datalist id="fruits">
+            <option value="Orange"></option>
+            <option value="Pomme"></option>
+            <option value="Poire"></option>
+            <option value="Prune"></option>
+        </datalist>
+
+        <p><input type="submit"></p>
+    </form>
+    <button onclick="alert('Action JavaScript')">Cliquez-moi</button>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 5 : Informaticien</title>
+    <style>
+        label {
+            display: block;
+            width: 150px;
+            float: left;
+        }
+
+        input:invalid {
+            background-color: crimson;
+        }
+        .ligne{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            <p><label for="nom">Nom </label><input type="text" id="nom" placeholder="saisir votre nom"></p>
+            <p><label for="prenom">Prénom </label><input type="text" id="prenom" placeholder="saisir votre prénom">
+            </p>
+            <p><label for="email">Email </label><input type="email" id="email" placeholder="saisir votre Email"></p>
+            <p><label>Sexe</label>
+                <label for="masc">Masculin <input type="radio" id="masc" name="sexe"></label>
+                <label for="fem">Féminin <input type="radio" id="fem" name="sexe"></label> </p> <br>
+            <p><label for="photo">Photo </label><input type="file" name="photo" accept="image/png, image/jpeg"></p>
+            <p><label>Pays</label>
+                <select>
+                    <option value="1">France</option>
+                    <option value="2">Espagne</option>
+                    <option value="3">Italie</option>
+                    <option value="4">Angleterre</option>
+                    <option value="5">Suisse</option>
+                    <option value="6">Portugal</option>
+                    <option value="7">Belgique</option>
+                </select> </p>
+            <p><label for="lang">Les langages préférés</label>
+                <select multiple>
+                    <option value="1">Java</option>
+                    <option value="2">C</option>
+                    <option value="3">C++</option>
+                    <option value="4">PHP</option>
+                    <option value="5">Python</option>
+                    <option value="6">HTML</option>
+                </select>
+                (Maintenir la touche CTRL pour choix multiple) </p>
+            <p><label for="dom">Domaines d'activités</label>
+                <label>Développement<input type="checkbox" name="dom"></label>
+                <label>Gestion Projet<input type="checkbox" name="dom"></label>
+                <label>Bases de données <input type="checkbox" name="dom"></label> </p> <br>
+            <div class="ligne">
+                <input type="submit">
+                <input type="reset" value="Annuler">
+
+            </div>
+
+            </datalist>
+            <label></label>
+        </fieldset>
+    </form>
+</body>
+
+</html>

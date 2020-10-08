@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 6</title>
+    <style>
+        table {
+            border: black 1px solid;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        td,
+        th {
+            border: black 1px solid;
+        }
+
+        thead {
+            text-align: center;
+        }
+
+        tfoot {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Calcul de la moyenne</caption>
+        <thead>
+            <tr>
+                <th>Matières</th>
+                <th>Note par marière</th>
+                <th>Coefficient</th>
+                <th>Note*Coefficient</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mathematique</td>
+                <td>17</td>
+                <td>4</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td>Physique</td>
+                <td>15</td>
+                <td>3</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>Informatique</td>
+                <td>16</td>
+                <td>2</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td colspan="2">Totals</td>
+                <td>9</td>
+                <td>145</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Moyenne</td>
+                <td>16.12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

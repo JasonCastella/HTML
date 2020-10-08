@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Tableaux</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border: 5px solid rebeccapurple;
+            width: 250px;
+            height: 150px;
+            border-collapse: collapse;
+            text-align: center;
+            background-color: rgb(43, 243, 130);
+        }
+
+        td {
+            border: 1px solid black;
+            width: 33%;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .top {
+            vertical-align: top;
+        }
+
+        .bottom {
+            vertical-align: bottom;
+        }
+
+        .color {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr class="top color">
+            <td class="left">Cellule 1</td>
+            <td>Cel 2</td>
+            <td class="right">3</td>
+        </tr>
+        <tr class="color">
+            <td class="left">Cellue 4</td>
+            <td>Cel 5</td>
+            <td class="right">6</td>
+        </tr>
+        <tr class="bottom">
+            <td class="left">Cellule 7</td>
+            <td>Cel 8</td>
+            <td class="right">9</td>
+        </tr>
+    </table>
+</body>
+
+</html>

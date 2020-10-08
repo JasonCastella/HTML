@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 2 : activité commerciale</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Client</legend>
+            <label>Nom et prénom: <input type="text" placeholder="Nom et prénom"></label> <br>
+            <label>Adresse: <input type="text"></label> <br>
+            <label>Code Postal: <input type="text" size="3" pattern="[0-9]{5}"></label> <br>
+            Pays: <input type="text" value="France" readonly>
+        </fieldset>
+        <fieldset>
+            <legend>Commande</legend>
+            Modèle: <input type="text" value="Road 66"> <br>
+            Taille: <br>
+            <input type="range" min="1" max="4"> <br>
+            S-------M-------X-------XL <br> <br>
+            <label>Quantité: <input type="number" value="1"></label>
+        </fieldset>
+        <input type="submit" value="Commander">
+        <input type="reset" value="Recommencer">
+
+
+    </form>
+</body>
+
+</html>

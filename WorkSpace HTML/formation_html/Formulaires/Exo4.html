@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 4 : mot de passe</title>
+    <style>
+        input:valid {
+            background-color: chartreuse;
+        }
+
+        input:invalid {
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Authentification</legend>
+            <label>Login: <input type="email" pattern=".+@needemand.com" placeholder="saisir votre login"
+                    required></label>
+            <label>Mot de passe: <input type="password" pattern="(?=.*\d).{6,8}" placeholder="saisir votre mot de passe"
+                    required></label> <br>
+            <button type="submit">Envoyer</button>
+            <input type="reset" value="Effacer">
+        </fieldset>
+    </form>
+</body>
+
+</html>

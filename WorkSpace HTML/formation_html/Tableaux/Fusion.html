@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Fusion de cellules</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 250px;
+            height: 150px;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        .violet {
+            background-color: violet;
+        }
+
+        .bleu {
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Légende du tableau</caption>
+        <thead class="violet">
+            <tr>
+                <th colspan="4">Titre du Tableau</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">Note</th>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+        <tfoot class="bleu">
+            <tr>
+                <td>Résultat</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
