@@ -1,0 +1,101 @@
+.rouge{
+    background-color: #fe0103; 
+    border: black 1px solid;
+}
+.vertClair{
+    background-color: #02cc00;
+}
+.vert{
+    background-color: #01994e;
+}
+.violetClair{
+    background-color: #93f;
+}
+.violet{
+    background-color :#6600cd;
+    border: black 1px solid;
+}
+.bleu{
+    background-color: #3399fe;
+    border: black 1px solid;
+}
+.bleuGris{
+    background-color: #7ea6e1;
+}
+.orange{
+    background-color: #ff7f00;
+    border: black 1px solid;
+}
+
+#main{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12,50px);
+    grid-template-rows: repeat(8,50px);
+    color: white;
+}
+#main div{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.courrier{
+    grid-area: 1/1/span 2/span 4;
+}
+.calendrier{
+    grid-area: 1/5/span 2/span 4;
+}
+.photos{
+    grid-area: 1/9/span 2/span 2;
+}
+.c1{
+    grid-area: 1/11/span 1/span 1;
+}
+.c2{
+    grid-area: 1/12/span 1/span 1;
+}
+.c3{
+    grid-area: 2/11/span 1/span 1;
+    border: black 1px solid;
+}
+.c4{
+    grid-area: 2/12/span 1/span 1;
+}
+.skype{
+    grid-area: 3/1/span 2/span 2;
+}
+.contacts{
+    grid-area: 3/3/span 2/span 2;
+}
+.bourse{
+    grid-area: 3/5/span 2/span 4;
+}
+.explorer{
+    grid-area: 3/9/span 2/span 2;
+}
+.aide{
+    grid-area: 3/11/span 2/span 2;
+}
+.liste{
+    grid-area: 5/1/span 2/span 2;
+}
+.skydrive{
+    grid-area: 5/3/span 2/span 2;
+}
+.croix{
+    grid-area: 5/5/span 4/span 4;
+    border: black 1px solid;
+}
+.cartes{
+    grid-area: 5/9/span 2/span 2;
+    border: black 1px solid;
+}
+.sante{
+    grid-area: 5/11/span 2/span 2;
+}
+.bureau{
+    grid-area: 7/1/span 2/span 4;
+}
+.actu{
+    grid-area: 7/9/span 2/span 4;
+}

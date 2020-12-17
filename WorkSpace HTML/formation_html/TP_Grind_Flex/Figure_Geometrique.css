@@ -1,0 +1,61 @@
+/* conteneur pricipal découpé en 6 lignes et 7 colones */
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px 30px;
+    height: 500px;
+    width: 600px;
+}
+
+/* h corresponds à horizontal, et de gauche à droite */
+.h1{
+    grid-area: 1/1/span 1/span 6;
+}
+
+.h2{
+    grid-area: 2/2/span 1/span 4;
+}
+
+.h3{
+    grid-area: 5/3/span 1/span 4;
+}
+
+.h4{
+    grid-area: 6/2/span 1/span 6;
+}
+
+/* v corresponds à horizontal, et de haut en bas */
+.v1{
+    grid-area: 2/1/span 5/span 1;
+}
+
+.v2{
+    grid-area: 3/2/span 3/span 1;
+}
+
+.v3{
+    grid-area: 2/6/span 3/span 1;
+}
+
+.v4{
+    grid-area: 1/7/span 5/span 1;
+}
+
+
+/* couleurs des grids */
+.vert{
+    background-color: #D5E8D4;
+    border: #95BE7F 1px solid;
+}
+
+.bleu{
+    background-color: #DAE8FC;
+    border: #6D8FBF 1px solid;
+}
+
+.orange{ 
+    grid-area: 3/3/span 2/span 3;
+    background-color: #FFE6CC;
+    border: #DAA00E 1px solid;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michel CAVAUD, Contact</title>
+    <link rel="stylesheet" href="portfiolioMichel.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="menu-principal">
+            <ul>
+                <li id="logo">
+                    <a href="index.html">
+                        <img src="icones/logo.png" alt="Logo Michel CAVAUD">
+                    </a>
+                </li>
+                <li></li>
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button class="bouton-menu">
+                        <a href="index.html">CV
+                            <img src="icones/FLECHE copie.png" alt="Icone d'une fleche" class="icon">
+                        </a>
+                    </button>
+                    <div class="dropdown-child">
+                        <a href="index.html">Compétences</a>
+                        <a href="index.html">Expériences Pro</a>
+                        <a href="index.html">Formation/Diplomes</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="bouton-menu">
+                        <a href="portfolioMichelRéalisations.html">Réalisations <img src="icones/FLECHE copie.png"
+                                alt="Icone d'une fleche" class="icon"></a>
+                    </button>
+                    <div class="dropdown-child">
+                        <a href="portfolioMichelRéalisations.html#link-rea1">Réalisation 1</a>
+                        <a href="portfolioMichelRéalisations.html#link-rea2">Réalisation 2</a>
+                        <a href="portfolioMichelRéalisations.html#link-rea3">Réalisation 3</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="portfolioMichelContact.html">
+                        <p id="surligne-contact">Contacts</p>
+                    </a>
+
+                </li>
+            </ul>
+        </nav>
+        <section id="marge">
+            <h1>Contact</h1>
+            <article id="encadre">
+                Si vous souhaitez discuter d'un projet, veuillez remplir le formulaire ci-dessous et je reviendrais
+                rapidement vers vous.
+            </article>
+        </section>
+    </header>
+    <main>
+        <section id="contact">
+            <form action="">
+                <div class="formulaire-debut">
+                    <div>
+                        <label for="formulaire-nom">Nom : </label>
+                        <input type="text" id="formulaire-nom" placeholder="Veuillez renseigner votre nom et prenom" required>
+                    </div>
+                    <div>
+                        <label for="formulaire-email">Email : </label>
+                        <input type="email" id="formulaire-email" placeholder="Veuillez renseigner votre adresse mail" required>
+                    </div>
+                </div>
+                <label id="message-label" for="formulaire-message">Votre message : </label>
+                <textarea name="" id="formulaire-message" cols="30" rows="10"
+                    placeholder="Ici votre message..." required></textarea>
+                <button type="submit" id="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <ul class="social-link">
+                <li><a href="https://github.com/"><img src="icones/github.png" alt="Icone GitHub" class="icon">Michel
+                        sur GitHub</a></li>
+                <li><a href="https://fr.linkedin.com/"><img src="icones/linkedin.png" alt="Icone Linkedin"
+                            class="icon">Michel sur Linkedin</a></li>
+                <li><a href="portfolioMichelContact.html"><img src="icones/icone_mail.png" alt="Icone adresse mail"
+                            class="icon">Contactez Michel</a></li>
+            </ul>
+            <p class="©">© 2020 Michel CAVAUD. All rights reserved.</p>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoir Javascript</title>
+    <style>
+        #multiplication {
+            display: flex;
+        }
+
+        #multiplication table {
+            border: 1px solid rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="question1()">Question 1</button>
+    <button onclick="question2()">Question 2</button>
+    <button onclick="question3()">Question 3</button>
+    <button onclick="question4()">Question 4</button>
+    <button onclick="question5()">Question 5</button>
+    <button onclick="question6()">Question 6</button>
+    <button onclick="question7()">Question 7</button>
+    <button onclick="question7bis()">Question 7bis</button>
+    <button onclick="question8()">Question 8</button>
+    <button onclick="question9()">Question 9</button>
+
+    <div id="multiplication"></div>
+
+    <script>
+        function question1() {
+            var nom = prompt("Veuillez renseigner votre nom");
+            var confirmation = prompt("Veuillez confirmer votre nom");
+            while (confirmation != nom) {
+                confirmation = prompt("Confirmation incorrecte, veuillez confirmer votre nom...");
+            }
+            alert("Votre nom est confirmé : " + confirmation);
+        }
+
+        function question2() {
+            var age = prompt("Veuillez renseigner l'age de l'enfant");
+            if (age == 6 || age == 7) {
+                alert("Catégorie : Poussin");
+            } else if (age == 8 || age == 9) {
+                alert("Catégorie : Pupille");
+            } else if (age == 10 || age == 11) {
+                alert("Catégorie : Minime");
+            } else if (age >= 12 || age <= 17) {
+                alert("Catégorie : Cadet");
+            } else alert("Erreur, vous devez renseigner une valeur etre 6 et 17");
+        }
+
+        function question3() {
+            var n = 10;
+            var p = 4;
+            var q = 2;
+            var x = 1.75;
+
+            var r1 = n + q;
+            var r2 = n + x;
+            var r3 = n % p * q;
+            var r4 = n % -p * n;
+            var r5 = n < p;
+            var r6 = n >= p;
+
+            alert("n=10, p=4, q=2, x=1.75 \n Calcul des expressions suivantes : \n n + q = " + r1 + "\n n + x = " + r2 + "\n n % p * q = " + r3 + "\n n % -p * n = " + r4 + "\n n < p = " + r5 + "\n n >= p = " + r6);
+        }
+
+        function question4() {
+            var aPayer;
+            var prix;
+
+            prix = prompt("Quel est le montant ?");
+            if (prix > 150) {
+                aPayer = 0.99 * prix;
+            } else if (prix >= 0 && prix <= 150) {
+                aPayer = prix;
+            }
+            if (aPayer != null) {
+                alert("Le montant à payer est " + aPayer);
+
+            } else alert("Erreur, vous n'avez pas rentré un nombre")
+        }
+
+        function question5() {
+            var annéeNaissance = prompt("Veuillez renseigner votre année de naissance");
+            while (isNaN(annéeNaissance) || annéeNaissance > 2020 || annéeNaissance < 1900) {
+                alert("Saisie incorrecte, veuillez renseigner un nombre compris entre 1900 et 2020")
+                annéeNaissance = prompt("Quel est votre année de naissance ?")
+            }
+            var annéeActuelle = new Date().getFullYear();
+            var ageApproximatif = annéeActuelle - annéeNaissance;
+
+            alert(ageApproximatif);
+        }
+
+        function question6() {
+            var x;
+            alert("Ouvrir la console de votre naviguateur soit avec clic droit examiner l'élement, soit F12, puis cliquer sur l'onglet Console");
+            console.log("Vous devriez voir ce message apparaitre dans la console");
+            console.log("J'ai crée une variable x, attribuons lui la valeur 0 avec la commande x=0. Maintenant, tappez x == 0, puis la touche entrée");
+            console.log("La console vous renvoie la valeur booléenne true, parce que x est bel est bien égal à 0");
+            console.log("Essayons maintenant de tapper x=1, puis tappez à nouveau x==0, elle va vous dire false, puisque vous venez via l'opérateur = de lui affecter la valeur 1.");
+            console.log("Tappez x==1, et la console va vous répondre true. Vous avez compris ?");
+            console.log("L'opérateur = permet d'attribuer une donnée à une variable, tandis que l'opérateur == permet de faire une comparaison, si identique, elle vous renvoie true, sinon false");
+            console.log("J'espère que ce guide vous aura aider à mieux comprendre.");
+        }
+
+        function question7() {
+            var n = prompt("Veuillez rentrer un entier");
+            while (!Number.isInteger(Number(n))) {
+                alert("Vous n'avez pas saisi un nombre entier");
+                n = prompt("Saisissez un entier");
+            }
+            var creation = document.getElementById("multiplication");
+            creation.innerHTML = tableDeN(n);
+        }
+
+        function question7bis() {
+            var tableaux = "";
+            for (let j = 1; j <= 10; j++) {
+                tableaux += tableDeN(j);
+            }
+            var creation = document.getElementById("multiplication");
+            creation.innerHTML = tableaux;
+        }
+
+        function tableDeN(x) {
+            var tableau = "<table><tr><th colspan=2>Table de " + x + "</th></tr>";
+            for (let i = 1; i <= 10; i++) {
+                tableau += "<tr><td>" + x + " x " + i + " = </td><td>" + x * i + "</td></tr>";
+            }
+            tableau += "</table>";
+            return tableau;
+        }
+
+        function question8() {
+            var n = 7;
+            var somme = 0;
+            for (let j = 1; j <= n; j++) {
+                somme += factorielle(j);
+            }
+            alert(somme);
+        }
+
+        function factorielle(i) {
+            var result = i;
+            while (i > 1) {
+                i--;
+                var result = result * i;
+            }
+            return result;
+        }
+
+        function question9() {
+            var nb1;
+            var nb2;
+            var operation;
+            var result;
+
+            faire();
+
+            function faire() {
+                nb1 = prompt("Veuillez entrer le premier nombre");
+                while (isNaN(nb1)) {
+                    alert("Vous n'avez pas renseigné un nombre");
+                    nb1 = prompt("Renseignez le premier nombre");
+                }
+                operation = prompt("Veuillez entrer l'operateur");
+                while (operation != "+" && operation != "-" && operation != "*" && operation != "/") {
+                    alert("Vous n'avez pas renseigné un opérateur valide");
+                    operation = prompt("Renseignez l'un des opérateurs suivant : + - / *");
+                }
+                nb2 = prompt("Veuillez entrer les deuxième nombre");
+                while (isNaN(nb2)) {
+                    alert("Vous n'avez pas renseigné un nombre");
+                    nb1 = prompt("Renseignez le second nombre")
+                }
+
+                nb1 = parseFloat(nb1);
+                nb2 = parseFloat(nb2);
+                var test = confirm("Vous avez bien demandé le calcul suivant ? \n" + nb1 + " " + operation + " " + nb2); if (test) {
+                    alert(calculer(nb1, nb2, operation));
+                } else {
+                    faire();
+                }
+            }
+
+            function calculer(nb1, nb2, operateur) {
+                switch (operateur) {
+                    case "+":
+                        result = nb1 + nb2;
+                        break;
+                    case "-":
+                        result = nb1 - nb2;
+                        break;
+                    case "*":
+                        result = nb1 * nb2;
+                        break;
+                    case "/":
+                        if (nb2 == 0) {
+                            result = "La division par 0 est impossible !"
+                        } else
+                            result = nb1 / nb2;
+                        break;
+                    default:
+                        break;
+                } return result;
+            }
+        }
+    </script>
+</body>
+
+</html>

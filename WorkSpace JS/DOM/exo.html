@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutton</title>
+</head>
+
+<body onload="init()">
+
+    <div id="container" onclick="alert('Hello World')"></div>
+
+    <input type="text" name="affiche">
+    <button onclick="display()">Affiche Texte</button>
+
+
+
+    <script>
+        function init() {
+            // Recherche de l’élément div ayant comme identifiant container 
+            var oldContainer = document.getElementById('container');
+
+            // Création en mémoire d’un élément button 
+            var newBut = document.createElement('button');
+
+            // Création du node de type texte 
+            var text = document.createTextNode('Appuyez Ici');
+
+            // Affectation du node texteDiv au node newBut
+            newBut.appendChild(text);
+
+            // Intégration du nouveau button
+            oldContainer.appendChild(newBut);
+        }
+
+        function display() {
+            // Récupération de l'élément ayant comme nom affiche dans un array
+            var contenu = document.getElementsByName('affiche');
+
+            // Récupération de la valeur du premier élément de l'array et affichage via alert
+            var result= contenu[0].value;
+            alert(result);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo3 : Alcotest</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var weight = prompt("Quel est votre masse (kg) ?");
+        while (isNaN(weight) || weight < 40 || weight > 200) {
+            weight = prompt("Saisie incorrecte, veuillez renseigner votre masse en kg svp (compris entre 40 et 200)");
+        }
+        var nbDrink = prompt("Combien de verre avez vous bu ?");
+        while (isNaN(nbDrink) || nbDrink <= 0 || nbDrink > 50) {
+            nbDrink = prompt("Saisie incorrecte, veuillez renseigner le nombre de verre que vous avez bu svp (entre 1 et 50)");
+        }
+        var alcoholLvl = (nbDrink * 10) / weight * 0.7;
+        alert("Votre taux d'alcoolémie est de : " + alcoholLvl);
+
+    </script>
+</body>
+
+</html>

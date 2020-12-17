@@ -1,0 +1,438 @@
+/* Général-----------------------------------------------------*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --back: #280789;
+    --text: #c8a700;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1{
+   font-size: 48px;
+    color: #8c7400;
+}
+
+h2{
+    font-size: 28px;
+    color: #8c7400;
+}
+
+ul{
+    list-style: none;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.image{
+    width: 200px;
+    height: 100px;
+}
+
+header{
+    background-color: var(--back);
+    color: var(--text);
+    height: 300px;  
+}
+
+main{
+    background-color: #12092e;
+    padding: 70px;
+    color: #FFF;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #1F0960;
+    color: var(--text);
+}
+
+/* Header------------------------------------------------------*/
+
+nav#menu-principal{
+    position: fixed;
+    top:0;
+    background-color: var(--back);
+    width: 100%;
+    height: 70px;
+}
+
+nav#menu-principal ul{
+    display: grid;
+    grid-template-columns: 3fr 2fr repeat(4, 1fr);
+}
+
+nav#menu-principal ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+    width: 100%;
+    height: 70px;
+}
+
+nav#menu-principal ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--text);
+}
+
+nav#menu-principal ul li:not(#logo) a{
+    max-width: 200px;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#logo a img{
+    width: 80%;
+    min-width: 200px;
+}
+
+#logo:hover{
+  transform: scale(1.05); 
+}
+
+.bouton-menu{
+    cursor: pointer;
+    background-color: var(--back);
+    color: var(--text);
+    border: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown-child{
+    display: none;
+    background-color: var(--back);
+    color: var(--text);
+}
+
+.dropdown-child a{
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+}
+
+.dropdown:hover .dropdown-child{
+    display: block;
+}
+
+#surligne-accueil{
+    border-top: 3px solid var(--text);
+}
+
+#surligne-realisation{
+    border-top: 3px solid var(--text);
+}
+
+#surligne-contact{
+    border-top: 3px solid var(--text);
+}
+
+/* Main Commun-------------------------------------------------*/
+
+#marge{
+    margin-top: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("icones/Fond\ PHP.jpg");
+    background-size: cover;
+}
+
+#encadre{
+    background-color: rgba(0,0,0,0.5);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+article ul li{
+    display: flex;
+    align-items: center;
+}
+
+article ul li a{
+    display: flex;
+    align-items: center;
+}
+
+/* Main Accueil------------------------------------------------*/
+
+.bouton-onglet{
+    background-color: #8c7400;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.bouton-onglet:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--text);
+}
+
+.bouton-onglet.on{
+    background-color: var(--back);
+}
+
+#main-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main nav{
+    padding-top: 50px;
+}
+
+.accueil-text{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--back) ;
+    width: 80vw;
+    border-radius: 30px;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+/* Try Barre Circulaire----------------------------------------*/ 
+
+#progress section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--text);
+}
+
+.progress-circle{
+    position: relative;             /* pour servir de référent */
+    box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+    font-size: 6em;                 /* pour définir les dimensions */
+    width: 1em;                     /* fixe la largeur */
+    height: 1em;                    /* fixe la hauteur */
+    border-radius: 50%;             /* rendu aspect circulaire */
+    border: .15em solid #FFF;       /* couleur de fond de l'anneau */
+    background-color: var(--back);         /* couleur de fond de la progress bar */
+}
+
+.progress-masque {
+    position: absolute;
+    width: 1em;                     /* 100% de la largeur */
+    height: 1em;                    /* 100% de la hauteur */
+    left: -.15em;                   /* décalage de la largeur bordure de la gauge */
+    top: -.15em;                    /* décalage de la largeur bordure de la gauge */
+    clip: rect(0, 1em, 1em, .5em);  /* par défaut seule la partie droite est visible */
+}
+
+.progress-circle[data-value^='5']:not([data-value='5']):not([data-value^='5.']) .progress-masque,
+.progress-circle[data-value^='6']:not([data-value='6']):not([data-value^='6.']) .progress-masque,
+.progress-circle[data-value^='7']:not([data-value='7']):not([data-value^='7.']) .progress-masque,
+.progress-circle[data-value^='8']:not([data-value='8']):not([data-value^='8.']) .progress-masque,
+.progress-circle[data-value^='9']:not([data-value='9']):not([data-value^='9.']) .progress-masque,
+.progress-circle[data-value^='100'] .progress-masque {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.progress-barre,
+.progress-sup50 {
+  position: absolute;
+  box-sizing: border-box;         /* prise en compte bordure dans la dimension */
+  border-width: .15em;            /* largeur bordure de la gauge */
+  border-style: solid;
+  border-color: var(--text);
+  border-radius: 50%;             /* rendu aspect circulaire */
+  width: 1em;                     /* largeur à 100% */
+  height: 1em;                    /* hauteur à 100% */
+  clip: rect(0, .5em, 1em, 0);    /* on ne garde que la partie gauche */
+}
+
+.progress-circle[data-value="10"]   .progress-barre {transform: rotate(36.00deg)}
+.progress-circle[data-value="20"]   .progress-barre {transform: rotate(72.00deg)}
+.progress-circle[data-value="30"]   .progress-barre {transform: rotate(108.00deg)}
+.progress-circle[data-value="40"]   .progress-barre {transform: rotate(144.00deg)}
+.progress-circle[data-value="50"]   .progress-barre {transform: rotate(180.00deg)}
+.progress-circle[data-value="60"]   .progress-barre {transform: rotate(216.00deg)}
+.progress-circle[data-value="70"]   .progress-barre {transform: rotate(252.00deg)}
+.progress-circle[data-value="80"]   .progress-barre {transform: rotate(288.00deg)}
+.progress-circle[data-value="90"]   .progress-barre {transform: rotate(324.00deg)}
+.progress-circle[data-value="100"]   .progress-barre {transform: rotate(360.00deg)}
+
+.progress-sup50 {
+    display: none;
+    clip: rect(0, 1em, 1em, .5em);
+}
+
+.progress-circle[data-value^='5']:not([data-value='5']):not([data-value^='5.']) .progress-sup50,
+.progress-circle[data-value^='6']:not([data-value='6']):not([data-value^='6.']) .progress-sup50,
+.progress-circle[data-value^='7']:not([data-value='7']):not([data-value^='7.']) .progress-sup50,
+.progress-circle[data-value^='8']:not([data-value='8']):not([data-value^='8.']) .progress-sup50,
+.progress-circle[data-value^='9']:not([data-value='9']):not([data-value^='9.']) .progress-sup50,
+.progress-circle[data-value^='100'] .progress-sup50 {
+  display:block;
+}
+
+.progress-circle:after {
+    content: attr(data-value) "%";  /* récup. valeur de progression */
+    font-size: 0.15em;              /* taille de la font en % du parent */
+    height: 100%;                   /* centrage dans le parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /*-- pour effet shadow intérieur --*/
+    border-radius: 50%;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5) inset;
+}
+
+/* Main Réalisations-------------------------------------------*/
+
+#realisation{
+    display: flex;
+    flex-direction: column;
+}
+
+#realisation section{
+    padding: 50px;
+}
+
+.projet{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--back) ;
+    width: 80vw;
+    border-radius: 50px;
+    margin: 50px;
+}
+
+.image-realisation{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.projet-text-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-project{
+    background-color: var(--text);
+    color: var(--back);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+/* Main Contact------------------------------------------------*/
+
+#contact{
+    background-color: var(--back) ;
+    width: 70vw;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.formulaire-debut{
+    display: flex;
+    width: 100%;
+}
+
+.formulaire-debut div{
+    width: 50%;
+}
+
+input,textarea{
+    display: block;
+    background-color: var(--text);
+    color: #1f0960;
+}
+
+input{
+    border-radius: 5px;
+    height: 30px;
+    min-width: 250px;
+    width: 90%;
+}
+
+textarea{
+    width: 100%;
+    margin-bottom: 30px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+#message-label{
+    align-self: flex-start;
+    padding-top: 30px;
+}
+
+#submit{
+    display: block;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #8c7400;
+}
+
+#submit:hover{
+    background-color: var(--text);
+}
+/* Footer------------------------------------------------------*/
+
+.social-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px;
+
+}
+
+.©{
+    font-size: 20px;
+    text-align: end;
+    vertical-align: bottom;
+}
+
+section ul li a{
+    display: flex;
+    align-items: center;
+}

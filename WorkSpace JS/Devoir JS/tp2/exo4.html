@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo4 : Class Chien</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Chien {
+            constructor(nom, age, race) {
+                this.nom = nom;
+                this.age = age;
+                this.race = race;
+                this.quantite = 0;
+            }
+
+            aboie() {
+                alert("Wouaf !");
+            }
+
+            mange(qte) {
+                this.quantite += qte;
+                alert(this.nom + " mange " + qte + " kgs pour un total de " + this.quantite + " kgs");
+            }
+        }
+
+        var toutou = new Chien("Medors", 8, "Berger Allemand");
+        toutou.aboie();
+        toutou.mange(10);
+        toutou.mange(5);
+
+        var minou = new Chien("Minou", 7, "Miaow");
+        minou.mange(4);
+        minou.mange(7);
+
+    </script>
+</body>
+
+</html>

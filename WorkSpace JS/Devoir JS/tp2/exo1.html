@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 JS Exo1</title>
+</head>
+
+<body>
+
+    <button onclick="addName()">Ajouter Nom</button>
+    <button onclick="randomWinner()">Tirage au sort</button>
+
+
+    <script>
+        
+        var tab = new Array();
+
+        function addName() {
+            var nb = prompt("Combien de noms à renseigner ?")
+            for (i = 0; i < nb; i++) {
+                tab.push(prompt("Veuillez renseinger le nom : " + (i + 1)));
+                //  tab[i] = prompt("Veuillez renseinger le nom : " + (i + 1));
+            }
+            console.log(tab);
+        }
+
+        function randomWinner() {
+            alert("Le nom tiré au sort est : " + (tab[getRandomInt(tab.length)]));
+        }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+    </script>
+</body>
+
+</html>

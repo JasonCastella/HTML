@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Couleurs</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .textWhite {
+            color: white;
+        }
+
+        .containBorder {
+            border: ;
+        }
+
+        button {
+            border-radius: 4px;
+            margin: 7px;
+            min-width: 85px;
+            min-height: 40px;
+        }
+
+        .firstPart {
+            display: block;
+            padding-right: 50px;
+        }
+
+        .secondPart {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .container {
+            width: 500px;
+            height: 300px;
+            border: black solid 1px;
+        }
+
+        .trio {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .red {
+            background-color: #f7cecc;
+            border: #9c6767 solid 1px;
+        }
+
+        .green {
+            background-color: #d0edd1;
+            border: #91ab81 solid 1px;
+        }
+
+        .blue {
+            background-color: #d9e8fb;
+            border: #818fb1 solid 1px;
+        }
+
+        .grey {
+            background-color: #f5f5f5;
+            border: #8d8d8d solid 1px;
+        }
+
+        .rainbow {
+            background-color: #ffe6cd;
+            border: #ddc896 solid 1px;
+        }
+
+        .purple {
+            background-color: #e2d5e7;
+            border: #8f8297 solid 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="firstPart">
+        <div class="container"></div>
+        <button class="purple" onclick="hello()">Hello World</button>
+        <div>
+            <input type="text" id="customText" placeholder="Ici du texte">
+            <button onclick="customText()">Custom</button>
+        </div>
+    </div>
+    <div class="secondPart">
+        <div class="trio">
+            <button class="red" onclick="red()">Red</button>
+            <button class="green" onclick="green()">Green</button>
+            <button class="blue" onclick="blue()">Blue</button>
+        </div>
+        <button class="grey" onclick="toogle()">Toggle</button>
+        <button class="rainbow" onclick="rainbow()">Rainbow</button>
+        <input id="range" type="range" min="1" max="20" step="1" onchange="range()">
+    </div>
+
+
+    <script>
+
+        function red() {
+            document.querySelector(".container").style.background = "#f7cecc";
+            document.querySelector('.container').classList.remove('textWhite');
+        }
+        function green() {
+            document.querySelector(".container").style.background = "#d0edd1";
+            document.querySelector('.container').classList.remove('textWhite');
+        }
+        function blue() {
+            document.querySelector(".container").style.background = "#d9e8fb";
+            document.querySelector('.container').classList.remove('textWhite');
+        }
+        function toogle() {
+            if (document.querySelector(".container").style.backgroundColor == "white") {
+                document.querySelector(".container").style.background = "black";
+                document.querySelector('.container').classList.add('textWhite');
+            } else {
+                document.querySelector(".container").style.background = "white";
+                document.querySelector('.container').classList.remove('textWhite');
+            }
+        }
+        function rainbow() {
+            var backColor = document.querySelector(".container").style.backgroundColor;
+            if (backColor == "violet") {
+                document.querySelector(".container").style.background = "red";
+            } else if (backColor == "blue") {
+                document.querySelector(".container").style.background = "violet";
+            } else if (backColor == "turquoise") {
+                document.querySelector(".container").style.background = "blue";
+            } else if (backColor == "green") {
+                document.querySelector(".container").style.background = "turquoise";
+            } else if (backColor == "yellow") {
+                document.querySelector(".container").style.background = "green";
+            } else if (backColor == "orange") {
+                document.querySelector(".container").style.background = "yellow";
+            } else if (backColor == "red") {
+                document.querySelector(".container").style.background = "orange";
+            } else {
+                document.querySelector(".container").style.background = "red"
+            }
+            if (backColor == "yellow" || backColor == "turquoise") {
+                document.querySelector('.container').classList.add('textWhite');
+            } else {
+                document.querySelector('.container').classList.remove('textWhite');
+            }
+        }
+        function range() {
+            var range = document.querySelector('#range').value;
+            document.querySelector('.container').style.border = range + "px solid black";
+        }
+        function hello() {
+            document.querySelector('.container').textContent += "Hello World ";
+        }
+        function customText() {
+            document.querySelector('.container').textContent += document.querySelector('#customText').value + " ";
+        }
+
+    </script>
+</body>
+
+</html>

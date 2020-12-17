@@ -1,0 +1,125 @@
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.bloc_titre h2 {
+    margin: 0;
+    font-family: "Filson Soft";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.36;
+    color: #3f3735;
+}
+
+.bloc {
+    position: relative;
+    width: 300px;
+    text-align: center;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.wraper {
+    position: relative;
+}
+
+.bloc_text {
+    position: relative;
+    z-index: 50;
+    margin-top: -15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+}
+
+#icone_coeur {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    background-image: url("coeur_vide.png"); 
+    left:-12%;
+    border-radius: 50%;
+}
+
+#icone_coeur:hover { 
+    background-image: url("coeur_rempli.png");
+} 
+
+.contenu_icon {
+    position: absolute;
+    left: 49%;
+    top: -28px;
+    transform: translateX(-50%);
+    z-index: 60;
+    width: 32px;
+    height: 42px;
+}
+
+.contenu_bloc_circle {
+    position: absolute;
+    top: -31px;
+    left: 49%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.contenu_bloc_circle::before,
+.contenu_bloc_circle::after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    left: -14px;
+    top: 13px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle at top left, transparent 18px, #fff 19px);
+}
+
+.contenu_bloc_circle::after {
+    left: auto;
+    right: -14px;
+    background: radial-gradient(circle at top right, transparent 18px, #fff 19px);
+}
+
+.contenu_bloc {
+    position: relative;
+    z-index: 50;
+    margin-top: -15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.bloc_text {
+    margin: 10px 10px 0 10px;
+}
+
+.bloc_titre {
+    padding: 5px 20px;
+    font-family: 'Filson Soft', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.type_bloc {
+    position: absolute;
+    top: 7%;
+    right: -1px;
+    background-color: #fff;
+    padding: 7px 5px 7px 10px;
+    border-radius: 100px 0 0 100px;
+    color: #ff6f61;
+}
